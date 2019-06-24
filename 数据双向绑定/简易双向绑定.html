@@ -15,25 +15,25 @@
 
 let userInput = document.getElementById('stu'), //获取文本框 
     contentOutput = document.getElementById('show')  //获取输出框
-    content = {}  //定义content对象
+    text = {}  //定义text对象
 
-//通过Object.defineProperty来对content对象设定要定义的student属性
-Object.defineProperty(content, 'content', {
+//通过Object.defineProperty来对text对象设定要定义的content属性
+Object.defineProperty(text, 'content', {
     //给属性提供getter的方法 如果没有getter则为undefined 当访问该属性时，触发该方法
     get: () => {
-        return content
+        return text
     },
 
     //给属性提供setter的方法，如果没有setter则为undefined 当属性值修改时，触发该方法
     set: (val) => {
         contentOutput.innerHTML = val  //检测到属性值修改 打印到输出框中
-        console.log('Input content: ' + val)
+        console.log('Input text: ' + val)
     }
 })
 
 //给文本框添加键盘监听事件
 userInput.addEventListener('keyup', (e) => {
-    content.content = e.target.value  //获取文本框里的值
+    text.content = e.target.value  //获取文本框里的值
 })
 
 </script>
