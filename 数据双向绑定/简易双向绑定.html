@@ -7,14 +7,14 @@
     <title>简易双向绑定</title>
 </head>
 <body>
-    <p><input type="text" id="stu" placeholder="Input some things"></p>
+    <p><input type="text" id="userInput" placeholder="Input some things"></p>
     <p id="show">Input some things</p>
 </body>
 </html>
 <script>
 
-let userInput = document.getElementById('stu'), //获取文本框 
-    contentOutput = document.getElementById('show')  //获取输出框
+let userInput = document.getElementById('userInput'), //获取文本框 
+    contentOutput = document.getElementById('show'),  //获取输出框
     text = {}  //定义text对象
 
 //通过Object.defineProperty来对text对象设定要定义的content属性
